@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/getNote', function(req,res) {
-  res.sendFile('/test.json', 'utf-8', function(err) {
+  res.sendFile(path.resolve(__dirname, './test.json'), 'utf-8', function(err) {
     if(err) throw err;
       res.send(data);
   });
